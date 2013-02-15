@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notes</title>
+  <%= stylesheet_link_tag    "sencha-touch", :media => "all" %>
+  <% if Rails.env == 'production' %>
+    <%= javascript_include_tag "sencha-touch-all-debug" %>
+  <% else %>
+    <%= javascript_include_tag "sencha-touch-all" %>
+  <% end %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= yield(:head) %>
+</head>
+<body>
+</body>
+</html>
